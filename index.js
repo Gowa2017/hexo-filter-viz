@@ -6,4 +6,7 @@ hexo.config.graphviz = assign({
   render: 'https://unpkg.com/viz.js@2.1.2/full.render.js',
 }, hexo.config.graphviz);
 
-hexo.extend.filter.register('before_post_render', renderer.render, 9);
+hexo.config.mermaid = assign({
+  js: 'https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js',
+}, hexo.config.mermaid);
+hexo.extend.filter.register('before_post_render', renderer.filter, 9);
